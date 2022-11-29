@@ -9,26 +9,26 @@ failedRequestReason: Unable to update IV journey: java.util.NoSuchElementExcepti
 16:27
 input: Request to /identity-verification/journey/gds-doc-check-result/eadd8398-1972-4331-b318-fcc18f619d45
      
-16:29:52.181	
-{ [-]
-   auditSource: identity-verification-frontend
-   auditType: ShowEvidenceOptions
-   dataPipeline: { [+]
-   }
-   detail: { [-]
-     authProviderId: 0000000607644804
-     confidenceLevel: 250
-     correlationId: unknown correlationId
-     deviceFingerprint: {"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36","language":"en-US","colorDepth":24,"resolution":"720x1280","timezone":0,"clientSideTimestamp":1669651853767,"sessionStorage":true,"localStorage":true,"indexedDB":true,"platform":"Win32","doNotTrack":false,"numberOfPlugins":5,"plugins":["PDF Viewer","Chrome PDF Viewer","Chromium PDF Viewer","Microsoft Edge PDF Viewer","WebKit built-in PDF"]}
-     deviceID: a336d4e4-f067-4693-8377-519b19c12074
-     evidenceOptions: passport, dvla, dva, P60, sa, payslip
-     journeyId: cb5450e0-afad-4bfa-bd23-27df13ee8e1a
-     journeyType: UpliftNino
-     nino: xxx
-     origin: pertax
-   }
-   eventId: 4944cc4e-408d-468e-8b8b-e78a8798f102
-   generatedAt: 2022-11-28T16:29:52.181Z
-   metadata: { [+]
-   }
-   tags: { [+]
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns1:validateDataResponse xmlns:ns1="http://dva.hmpo.gov.uk/passport-data-service">
+<validateDataResponse>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;validateDataResult xmlns="http://dva.hmpo.gov.uk/passport-data-service"&gt;
+&lt;validationResult&gt;Failure
+&lt;/validationResult&gt;
+&lt;bioDataMismatch&gt;true
+&lt;/bioDataMismatch&gt;
+&lt;passportNotFound&gt;false
+&lt;/passportNotFound&gt;
+&lt;passportCancelled&gt;false
+&lt;/passportCancelled&gt;
+&lt;matches&gt;
+&lt;onsMatch&gt;false
+&lt;/onsMatch&gt;
+&lt;stopMatch&gt;false
+&lt;/stopMatch&gt;
+&lt;lsrMatch&gt;false
+&lt;/lsrMatch&gt;
+&lt;/matches&gt;
+&lt;/validateDataResult&gt;
+</validateDataResponse></ns1:validateDataResponse></soap:Body></soap:Envelope>

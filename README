@@ -1,3 +1,12 @@
 Small test of Git and GitHub
 
 session-b97d8a19-0ce3-4f2c-bb71-cc7dc0539e2e
+
+16:21
+failedRequestReason: Unable to update IV journey: java.util.NoSuchElementException: None.get
+     input: Request to /identity-verification/journey/gds-doc-check-result/ee483bd9-25c4-4265-a17c-18ab2fa4cb39
+  
+16:27
+input: Request to /identity-verification/journey/gds-doc-check-result/eadd8398-1972-4331-b318-fcc18f619d45
+     
+     

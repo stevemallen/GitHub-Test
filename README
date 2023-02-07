@@ -1,2 +1,46 @@
 Small test of Git and GitHub
 
+
+documentLastName =  
+expectedLastName = ANTONY
+gdsCorrelationId = a08cabb4-8ff3-49e2-83c4-3887b88c5e74
+"urn:fdc:gov.uk:2022:rEzbyiHDrl4RADLsf5vK1cWo_aswsNE3CYKKumMlpbA"
+
+
+documentLastName =  
+expectedLastName = DINESH
+gdsCorrelationId = 24d349b3-551d-4961-9ba9-3720058d67e1
+"urn:fdc:gov.uk:2022:oLoHn7MsGZMfLBtdx4x8zlxT7Aj1qWebJVlJqx23F-Q"
+
+
+documentLastName = MOHAMMAD SAGHIR
+expectedLastName = SAGHIR
+gdsCorrelationId = d90e00a6-528a-485b-b98e-20ddeac9521c
+"urn:fdc:gov.uk:2022:Cv1GmmLqT8Cqte01UJ-8Uz1l13Jr6YOjEwNDbtUMnU0"
+
+
+documentLastName = ABDUL KADER
+expectedLastName = KADER
+gdsCorrelationId = 9ac5a28c-8042-47f0-99a8-c8b830f74a80
+"urn:fdc:gov.uk:2022:GRpAvNgOQ0P2lcXYnBixYvTQHukhXc_seCUznKk9Pvk"
+
+
+documentLastName = CLARE BROWN
+expectedLastName = BROWN
+gdsCorrelationId = 973d294f-9bd5-4142-9e7c-6e74ee81abb1
+"urn:fdc:gov.uk:2022:7hXGM1qWZpm9KfdUKWn-8G7kG-qIsTaoEjP4OImun_U"
+
+
+First find the continue audit for the correlation id:
+
+   detail.gdsCorrelationId = ccc auditType=GdsDocumentCheckContinue
+
+Then get the X-Request-ID From the continue call above, and use:
+
+   "<req id>" auditType=OutboundCall auditSource="gds-identity-verification-gateway" "request.detail.path"="https://oidc.account.gov.uk/userinfo"
+
+This finds the corresponding userinfo call, from which you can get the responseMessage and "sub" claim
+
+
+
+
